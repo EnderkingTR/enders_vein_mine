@@ -1,0 +1,43 @@
+{
+  "category.vein-mine": "Vein Mine",
+  "key.vein-mine.activate": "Activate Vein Mine",
+  "key.vein-mine.settings": "Vein Mine Settings",
+  "key.vein-mine.next_shape": "Next Shape Mode",
+  "key.vein-mine.prev_shape": "Previous Shape Mode",
+
+  "config.veinmine.title": "Vein Mine Settings",
+  "config.veinmine.category.general": "General",
+  "config.veinmine.maxBlocks": "Max Blocks",
+  "config.veinmine.maxBlocks.tooltip": "Maximum number of blocks to mine at once.",
+  "config.veinmine.damageTool": "Damage Tool",
+  "config.veinmine.damageTool.tooltip": "Whether the tool should take damage for each mined block.",
+  "config.veinmine.activationMode": "Activation Mode",
+  "config.veinmine.activationMode.tooltip": "How to trigger Vein Mining.",
+  "config.veinmine.shapeMode": "Shape Mode",
+  "config.veinmine.shapeMode.tooltip": "SHAPELESS: Identical blocks only. SHAPED: Rectangular prism of given dimensions.",
+  "config.veinmine.customShape": "Custom Shape (LxHxW)",
+  "config.veinmine.customShape.tooltip": "E.g. 5x6x7 for 5(X) by 6(Y) by 7(Z)",
+  "config.veinmine.renderOutline": "Render Outline",
+  "config.veinmine.renderOutline.tooltip": "Renders a preview of blocks that will be mined.",
+  "config.veinmine.directDrop": "Direct Drop To Inventory",
+  "config.veinmine.directDrop.tooltip": "Items drop directly into your inventory. Drops at feet if inventory is full.",
+  "config.veinmine.preventToolBreak": "Prevent Tool Break",
+  "config.veinmine.preventToolBreak.tooltip": "Stops vein mining before the tool breaks, leaving it with 1 durability.",
+  "config.veinmine.hungerDrain": "Hunger Drain",
+  "config.veinmine.hungerDrain.tooltip": "Drains hunger proportionally to the number of blocks mined.",
+
+  "config.veinmine.enum.activation.hold_key": "Hold Key",
+  "config.veinmine.enum.activation.sneak": "Sneak",
+  "config.veinmine.enum.activation.toggle": "Toggle",
+
+  "config.veinmine.enum.shape.shapeless": "Shapeless",
+  "config.veinmine.enum.shape.shaped": "Shaped",
+  "config.veinmine.enum.shape.tunnel_3x3": "3x3 Tunnel",
+  "config.veinmine.enum.shape.tunnel_2x1": "2x1 Tunnel",
+  "config.veinmine.enum.shape.stairs_up": "Stairs (Up)",
+  "config.veinmine.enum.shape.stairs_down": "Stairs (Down)",
+  "config.veinmine.enum.shape.tunnel_1x1": "1x1 Tunnel",
+
+  "message.veinmine.mode_changed": "§eVein Mine Mode: §a%s",
+  "message.veinmine.max_blocks": "Max: %s"
+}

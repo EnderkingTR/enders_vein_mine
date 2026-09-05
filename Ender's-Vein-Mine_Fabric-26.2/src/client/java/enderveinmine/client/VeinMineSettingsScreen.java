@@ -1,0 +1,84 @@
+package enderveinmine.client;
+
+import enderveinmine.config.VeinMineConfig;
+import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import me.shedaniel.clothconfig2.api.ConfigCategory;
+import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+
+public class VeinMineSettingsScreen {
+    public static Screen create(Screen parent) {
+        ConfigBuilder builder = ConfigBuilder.create()
+                .setParentScreen(parent)
+                .setTitle(Component.translatable("config.veinmine.title"));
+
+        builder.setSavingRunnable(() -> {
+            VeinMineConfig.save();
+            VeinMineClient.sendConfigToServer();
+        });
+
+        ConfigCategory general = builder.getOrCreateCategory(Component.translatable("config.veinmine.category.general"));
+        ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+
+        general.addEntry(entryBuilder.startIntField(Component.translatable("config.veinmine.maxBlocks"), VeinMineConfig.INSTANCE.maxBlocks)
+                .setDefaultValue(64)
+                .setMin(2)
+                .setMax(1024)
+                .setTooltip(Component.translatable("config.veinmine.maxBlocks.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.maxBlocks = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("config.veinmine.damageTool"), VeinMineConfig.INSTANCE.damageTool)
+                .setDefaultValue(true)
+                .setTooltip(Component.translatable("config.veinmine.damageTool.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.damageTool = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startEnumSelector(Component.translatable("config.veinmine.activationMode"), VeinMineConfig.ActivationMode.class, VeinMineConfig.INSTANCE.activationMode)
+                .setDefaultValue(VeinMineConfig.ActivationMode.HOLD_KEY)
+                .setEnumNameProvider(enumValue -> Component.translatable("config.veinmine.enum.activation." + ((Enum) enumValue).name().toLowerCase(java.util.Locale.ROOT)))
+                .setTooltip(Component.translatable("config.veinmine.activationMode.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.activationMode = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startEnumSelector(Component.translatable("config.veinmine.shapeMode"), VeinMineConfig.ShapeMode.class, VeinMineConfig.INSTANCE.shapeMode)
+                .setDefaultValue(VeinMineConfig.ShapeMode.SHAPELESS)
+                .setEnumNameProvider(enumValue -> Component.translatable("config.veinmine.enum.shape." + ((Enum) enumValue).name().toLowerCase(java.util.Locale.ROOT)))
+                .setTooltip(Component.translatable("config.veinmine.shapeMode.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.shapeMode = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startStrField(Component.translatable("config.veinmine.customShape"), VeinMineConfig.INSTANCE.customShape)
+                .setDefaultValue("3x3x3")
+                .setTooltip(Component.translatable("config.veinmine.customShape.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.customShape = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("config.veinmine.renderOutline"), VeinMineConfig.INSTANCE.renderOutline)
+                .setDefaultValue(true)
+                .setTooltip(Component.translatable("config.veinmine.renderOutline.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.renderOutline = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("config.veinmine.directDrop"), VeinMineConfig.INSTANCE.directDropToInventory)
+                .setDefaultValue(false)
+                .setTooltip(Component.translatable("config.veinmine.directDrop.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.directDropToInventory = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("config.veinmine.preventToolBreak"), VeinMineConfig.INSTANCE.preventToolBreak)
+                .setDefaultValue(true)
+                .setTooltip(Component.translatable("config.veinmine.preventToolBreak.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.preventToolBreak = newValue)
+                .build());
+
+        general.addEntry(entryBuilder.startBooleanToggle(Component.translatable("config.veinmine.hungerDrain"), VeinMineConfig.INSTANCE.hungerDrain)
+                .setDefaultValue(true)
+                .setTooltip(Component.translatable("config.veinmine.hungerDrain.tooltip"))
+                .setSaveConsumer(newValue -> VeinMineConfig.INSTANCE.hungerDrain = newValue)
+                .build());
+
+        return builder.build();
+    }
+}

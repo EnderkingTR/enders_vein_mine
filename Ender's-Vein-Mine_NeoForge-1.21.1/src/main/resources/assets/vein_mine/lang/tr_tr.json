@@ -1,0 +1,43 @@
+{
+  "key.category.vein_mine.category": "Vein Mine",
+  "key.vein-mine.activate": "Vein Mine Aktifleştir",
+  "key.vein-mine.settings": "Vein Mine Ayarları",
+  "key.vein-mine.next_shape": "Sonraki Şekil Modu",
+  "key.vein-mine.prev_shape": "Önceki Şekil Modu",
+
+  "config.veinmine.title": "Vein Mine Ayarları",
+  "config.veinmine.category.general": "Genel",
+  "config.veinmine.maxBlocks": "Maksimum Blok",
+  "config.veinmine.maxBlocks.tooltip": "Tek seferde kırılabilecek maksimum blok sayısı.",
+  "config.veinmine.damageTool": "Alete Hasar Ver",
+  "config.veinmine.damageTool.tooltip": "Kırılan her blok için aletin dayanıklılığı azalır.",
+  "config.veinmine.activationMode": "Aktivasyon Modu",
+  "config.veinmine.activationMode.tooltip": "Vein Mine'ın nasıl tetikleneceğini belirler.",
+  "config.veinmine.shapeMode": "Şekil Modu",
+  "config.veinmine.shapeMode.tooltip": "SHAPELESS: Sadece aynı bloklar. SHAPED: Belirtilen boyutlarda dikdörtgenler prizması.",
+  "config.veinmine.customShape": "Özel Şekil (UxYxG)",
+  "config.veinmine.customShape.tooltip": "Örn: 5(X) çarpı 6(Y) çarpı 7(Z) için 5x6x7",
+  "config.veinmine.renderOutline": "Çerçeve Göster",
+  "config.veinmine.renderOutline.tooltip": "Kırılacak blokların önizlemesini gösterir.",
+  "config.veinmine.directDrop": "Envantere Doğrudan Aktar",
+  "config.veinmine.directDrop.tooltip": "Düşen eşyalar direkt envanterinize gelir. Envanter doluysa yere düşer.",
+  "config.veinmine.preventToolBreak": "Alet Kırılmasını Önle",
+  "config.veinmine.preventToolBreak.tooltip": "Alet kırılmadan hemen önce vein mine durur ve aletin 1 dayanıklılığı kalır.",
+  "config.veinmine.hungerDrain": "Açlık Tüketimi",
+  "config.veinmine.hungerDrain.tooltip": "Kırılan blok sayısına orantılı olarak açlık barı azalır.",
+
+  "config.veinmine.enum.activation.hold_key": "Tuşa Basılı Tut",
+  "config.veinmine.enum.activation.sneak": "Eğil (Sneak)",
+  "config.veinmine.enum.activation.toggle": "Aç/Kapa",
+
+  "config.veinmine.enum.shape.shapeless": "Şekilsiz (Shapeless)",
+  "config.veinmine.enum.shape.shaped": "Şekilli (Shaped)",
+  "config.veinmine.enum.shape.tunnel_3x3": "3x3 Tünel",
+  "config.veinmine.enum.shape.tunnel_2x1": "2x1 Tünel",
+  "config.veinmine.enum.shape.stairs_up": "Merdiven (Yukarı)",
+  "config.veinmine.enum.shape.stairs_down": "Merdiven (Aşağı)",
+  "config.veinmine.enum.shape.tunnel_1x1": "1x1 Tünel",
+
+  "message.veinmine.mode_changed": "§eVein Mine Modu: §a%s",
+  "message.veinmine.max_blocks": "Maks: %s"
+}
