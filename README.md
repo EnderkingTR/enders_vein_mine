@@ -10,7 +10,7 @@ Ender's Vein Mine is a Minecraft mod that adds a powerful vein mining tool, allo
 - Compatible with Minecraft versions 1.20.1, 1.21.1, 1.21.11, 1.21.2, and 1.22.
 
 ## Installation
-1. Download the latest release JAR from the [Releases page](https://github.com/EnderkingTR/enders_vein_mine/releases).
+1. Download the latest release JAR from the [Releases page](https://www.curseforge.com/minecraft/mc-mods/enders-vein-mine).
 2. Place the JAR file into the `mods` folder of your Minecraft installation.
 3. Ensure you have the matching mod loader (Fabric or NeoForge) installed.
 4. Launch Minecraft and enjoy vein mining!
